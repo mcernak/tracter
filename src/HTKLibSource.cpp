@@ -121,7 +121,7 @@ Tracter::HTKLibSource::~HTKLibSource() throw() {
  * parse it's own extended filenames to seek to various positions in
  * the file
  */
-int Tracter::HTKLibSource::Fetch(IndexType iIndex, CacheArea& iOutputArea)
+Tracter::SizeType Tracter::HTKLibSource::Fetch(IndexType iIndex, CacheArea& iOutputArea)
 {
     int i;
     int offset = iOutputArea.offset;
