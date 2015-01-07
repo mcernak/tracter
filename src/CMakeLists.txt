@@ -182,7 +182,7 @@ if(SNDFILE_FOUND)
   add_executable(codec codec.cpp)
   add_executable(recorder recorder.cpp)
   target_link_libraries(codec static-lib)
-  target_link_libraries(recorder  static-lib)
+  target_link_libraries(recorder  static-lib pthread)
   list(APPEND INSTALL_TARGETS recorder)
 endif(SNDFILE_FOUND)
 
@@ -265,7 +265,7 @@ add_executable(extracter extracter.cpp)
 #add_executable(parser parser.cpp)
 
 # These link static for the time being.  Could be changed.
-target_link_libraries(extracter static-lib)
+target_link_libraries(extracter static-lib pthread)
 #target_link_libraries(testfile static-lib)
 #target_link_libraries(creature static-lib)
 #target_link_libraries(fft static-lib)
